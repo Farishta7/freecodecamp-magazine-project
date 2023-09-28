@@ -1,11 +1,3 @@
-*,
-::before,
-::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -20,7 +12,11 @@ h1 {
   font-family: 'Anton', sans-serif;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -40,15 +36,28 @@ img {
   object-fit: cover;
 }
 
-.hero > img {
-    width: 100%;
+.hero>img {
+  width: 100%;
   height: 15vh;
 }
 
+/* The <hr>tag in HTML stands for horizontal rule and is used to insert a 
+horizontal rule or a thematic break in an HTML page to divide or separate 
+document sections. It does not require a closing tag*/
 hr {
   margin: 1.5rem 0;
   border: 1px solid rgba(120, 120, 120, 0.6);
 }
+
+/* || UTILITIES */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* || SITEWIDE */
 
 .heading {
   grid-column: 2 / 3;
@@ -57,17 +66,17 @@ hr {
   row-gap: 1.5rem;
 }
 
+.hero {
+  grid-column: 1 / -1;
+  position: relative;
+}
+
 .text {
   grid-column: 2 / 3;
   font-size: 1.8rem;
   letter-spacing: 0.6px;
   column-width: 25rem;
   text-align: justify;
-}
-
-.hero {
-  grid-column: 1 / -1;
-  position: relative;
 }
 
 .hero-title {
@@ -142,7 +151,8 @@ hr {
   margin-bottom: 1.5rem;
 }
 
-.list-title, .list-subtitle {
+.list-title,
+.list-subtitle {
   color: #00beef;
 }
 
@@ -154,9 +164,12 @@ hr {
   place-items: center;
 }
 
-.image-1, .image-3 {
+.image-1,
+.image-3 {
   grid-column: 1 / -1;
 }
+
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 720px) {
   .image-wrapper {
@@ -174,19 +187,19 @@ hr {
   .hero-title {
     font-size: 6rem;
   }
-  
+
   .hero-subtitle,
   .author,
   .quote,
   .list-title {
     font-size: 1.8rem;
   }
-  
+
   .social-icons {
     font-size: 2rem;
   }
 
   .text {
     font-size: 1.6rem;
-  } 
+  }
 }
